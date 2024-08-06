@@ -1,0 +1,75 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--Light-pink);
+  min-height: 100vh;
+}
+
+.accordian {
+  background-color: var(--White);
+  max-width: 450px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 13px;
+}
+
+.title h1 {
+  font-weight: 700;
+  margin-left: 15px;
+  scale: 110%;
+}
+
+.accordian-item {
+  border-bottom: 0.5px solid lightgrey;
+  padding: 15px 13px 15px 13px;
+}
+
+.accordian-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.accordian-description {
+  display: none;
+  font-weight: 400;
+  color: var(--Grayish-purple);
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.1rem;
+}
+
+.accordian-item.active .accordian-description {
+  display: block;
+}
